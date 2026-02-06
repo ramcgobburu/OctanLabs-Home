@@ -20,7 +20,7 @@ export function Contact() {
             Connect with Us
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Stay in touch with us for updates, support, and valuable insights. We're 
+            Stay in touch with us for updates, support, and valuable insights. We&apos;re 
             here to help you every step of the way!
           </p>
         </div>

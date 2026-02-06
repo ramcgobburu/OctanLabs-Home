@@ -173,9 +173,9 @@ export default function AboutPage() {
                   <h2 className="text-2xl lg:text-3xl font-bold">Our Vision</h2>
                 </div>
                 <p className="text-muted-foreground leading-relaxed">
-                  To be the world's most trusted AI consulting partner, known for delivering 
+                  To be the world&apos;s most trusted AI consulting partner, known for delivering 
                   transformative solutions that create lasting value. We envision a future where 
-                  AI seamlessly integrates with human expertise to solve the world's most complex challenges.
+                  AI seamlessly integrates with human expertise to solve the world&apos;s most complex challenges.
                 </p>
                 <div className="bg-gradient-to-r from-primary/5 to-primary/10 rounded-xl p-6 border border-primary/20">
                   <h3 className="font-semibold mb-3 text-primary">2030 Goals</h3>
@@ -287,7 +287,7 @@ export default function AboutPage() {
                   Ready to Transform Your Business with AI?
                 </h2>
                 <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                  Let's discuss how our expertise can help you unlock the full potential 
+                  Let&apos;s discuss how our expertise can help you unlock the full potential 
                   of artificial intelligence for your organization.
                 </p>
               </div>

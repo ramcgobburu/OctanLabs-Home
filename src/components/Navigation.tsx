@@ -15,12 +15,9 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 export function Navigation() {
   const [isDark, setIsDark] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [mounted, setMounted] = useState(false);
   const [logoHighlighted, setLogoHighlighted] = useState(true);
 
   useEffect(() => {
-    // Set mounted to true after component mounts (client-side only)
-    setMounted(true);
     
     // Highlight logo on page load, then fade after 3 seconds
     const timer = setTimeout(() => {

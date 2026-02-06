@@ -15,7 +15,7 @@ import {
 interface BusinessFunction {
   id: string;
   name: string;
-  icon: any;
+  icon: React.ComponentType<{ className?: string }>;
   position: { x: number; y: number };
   isActive: boolean;
 }
@@ -23,7 +23,7 @@ interface BusinessFunction {
 interface AITool {
   id: string;
   name: string;
-  icon: any;
+  icon: React.ComponentType<{ className?: string }>;
   position: { x: number; y: number };
   color: string;
 }

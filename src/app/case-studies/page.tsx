@@ -111,7 +111,7 @@ export default function CaseStudiesPage() {
                 <span className="bg-gradient-to-r from-primary via-primary/80 to-primary bg-clip-text text-transparent"> AI Solutions</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Discover how we've transformed businesses across industries with cutting-edge AI implementations. 
+                Discover how we&apos;ve transformed businesses across industries with cutting-edge AI implementations. 
                 Each case study showcases measurable impact and innovative solutions.
               </p>
             </div>
@@ -308,7 +308,7 @@ export default function CaseStudiesPage() {
                   Ready to Create Your Success Story?
                 </h2>
                 <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                  Let's discuss how AI can transform your business. Our team of experts is ready to 
+                  Let&apos;s discuss how AI can transform your business. Our team of experts is ready to 
                   analyze your challenges and design a custom solution.
                 </p>
               </div>

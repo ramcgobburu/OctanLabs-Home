@@ -44,7 +44,7 @@ export function LogoMarquee() {
       <div className="mx-auto max-w-4xl px-6">
         <div className="text-center mb-6">
           <p className="text-sm font-bold text-foreground">
-            We've partnered with:
+            We&apos;ve partnered with:
           </p>
         </div>
         

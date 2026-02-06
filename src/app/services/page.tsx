@@ -347,7 +347,7 @@ export default function ServicesPage() {
                   Ready to Get Started?
                 </h2>
                 <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                  Let's discuss your AI needs and create a custom solution that drives 
+                  Let&apos;s discuss your AI needs and create a custom solution that drives 
                   real business value. Our experts are ready to help you succeed.
                 </p>
               </div>
