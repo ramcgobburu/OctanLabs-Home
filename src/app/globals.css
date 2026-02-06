@@ -1,0 +1,282 @@
+@import "tailwindcss";
+
+/* OctanLabs Consolidated - Ram theme (blue/orange) over Prince features */
+
+@layer base {
+  :root {
+    /* Base colors - Ram theme */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    
+    /* Surface colors */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    
+    /* Brand colors - OctanLabs vibrant gradient: electric blue to purple-pink */
+    --primary: 195 100% 50%;          /* Electric blue/cyan #00BFFF */
+    --primary-foreground: 0 0% 98%;
+    
+    --secondary: 271 76% 53%;         /* Purple-pink/magenta #8A2BE2 */
+    --secondary-foreground: 0 0% 98%;
+    
+    /* Neutral colors */
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    
+    --accent: 300 100% 50%;           /* Vibrant magenta #FF00FF */
+    --accent-foreground: 0 0% 98%;
+    
+    /* States */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    
+    /* UI elements */
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 195 100% 50%;             /* Electric blue ring */
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark theme - Ram style */
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 195 100% 60%;          /* Lighter electric blue for dark mode */
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 271 76% 63%;          /* Lighter purple-pink for dark mode */
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 300 100% 60%;            /* Lighter magenta for dark mode */
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 40 15% 95%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 195 100% 60%;              /* Lighter electric blue ring for dark mode */
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+  
+  /* Custom gradients - OctanLabs vibrant theme */
+  .gradient-cosmic {
+    background: linear-gradient(135deg, hsl(195, 100%, 50%) 0%, hsl(271, 76%, 53%) 50%, hsl(300, 100%, 50%) 100%);
+  }
+  
+  .gradient-octanlabs {
+    background: linear-gradient(135deg, #00BFFF 0%, #8A2BE2 100%);
+  }
+  
+  .gradient-subtle {
+    background: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
+  }
+}
+
+@layer components {
+  /* Hero badge */
+  .badge-hero {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 9999px;
+    border-width: 1px;
+    border-color: hsl(var(--border));
+    background-color: hsl(var(--secondary) / 0.5);
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: hsl(var(--secondary-foreground));
+    backdrop-filter: blur(4px);
+  }
+  
+  /* Company logo styling */
+  .company-logo {
+    opacity: 0.6;
+    transition-property: opacity, filter;
+    transition-duration: 300ms;
+    filter: grayscale(100%);
+  }
+  .company-logo:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+  }
+  
+  /* Logo image styling - transparent PNG - remove ALL backgrounds */
+  img[alt*="OctanLabs Logo"],
+  img[src*="logo.png"],
+  img[src="/logo.png"] {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    /* Use multiply blend mode to make white transparent on dark backgrounds */
+    mix-blend-mode: multiply;
+  }
+  
+  /* For light backgrounds, use screen blend mode */
+  .light img[alt*="OctanLabs Logo"],
+  .light img[src*="logo.png"] {
+    mix-blend-mode: screen;
+  }
+  
+  /* Ensure logo container has no white background */
+  a[href="/"] img,
+  .group img[alt*="OctanLabs"],
+  a[href="/"] > div,
+  a[href="/"] > div > div,
+  a[href="/"] > div > div > div {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+  }
+  
+  /* Remove any white backgrounds from logo area */
+  header a[href="/"],
+  header a[href="/"] * {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+  }
+  
+  /* Next.js Image component wrapper - remove all backgrounds */
+  span[style*="logo.png"],
+  div[style*="logo.png"],
+  span > img[src*="logo.png"],
+  div > img[src*="logo.png"] {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+  }
+  
+  /* Force transparent background on all image wrappers */
+  picture,
+  picture > img,
+  span[data-next-image],
+  div[data-next-image] {
+    background: transparent !important;
+  }
+  
+  /* Remove white backgrounds from any parent containers */
+  header * {
+    background-image: none !important;
+  }
+  
+  header a[href="/"] *,
+  header a[href="/"] * * {
+    background: transparent !important;
+    background-color: transparent !important;
+  }
+  
+  /* Animation utilities */
+  .hover-scale {
+    transition-property: transform;
+    transition-duration: 200ms;
+  }
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Logo shine animation */
+  @keyframes shine {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+  
+  .animate-shine {
+    animation: shine 2s infinite;
+  }
+}
+
+/* Ram theme: Video overlay (for hero video background) */
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.6) 50%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  z-index: 2;
+}
+
+/* Ram theme: Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
